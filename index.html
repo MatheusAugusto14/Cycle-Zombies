@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BO3 Cycles</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#121212" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: #0b0b0b;
+      color: #fff;
+      height: 100vh;
+      overflow: hidden;
+      font-family: "Roboto", sans-serif;
+    }
+    iframe {
+      width: 50%;
+      height: 100%;
+      border: none;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+      background: rgba(20, 20, 20, 0.9);
+      color: #b98aff;
+      font-weight: bold;
+      letter-spacing: 1px;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <header>BO3 Cycles – GobbleGum & Drop Tracker</header>
+  <iframe src="https://www.zombacus.com/gumballcycle" title="GobbleGum Cycle"></iframe>
+  <iframe src="https://www.zombacus.com/dropcycle" title="Drop Cycle"></iframe>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>
+</body>
+</html>
