@@ -14,9 +14,10 @@
       justify-content: space-between;
       background-color: #0b0b0b;
       color: #fff;
-      height: 100vh;
+      height: 100dvh; /* ✅ usa viewport dinâmica */
       overflow: hidden;
       font-family: "Roboto", sans-serif;
+      padding-top: 50px; /* espaço pro header */
     }
     iframe {
       flex: 1;
@@ -41,7 +42,7 @@
       }
       iframe {
         width: 100%;
-        height: 50%;
+        height: calc(50dvh - 25px);
       }
     }
     @media (orientation: landscape) {
